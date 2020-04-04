@@ -91,7 +91,7 @@ namespace Lab2
             MainCanvas.Children.Clear();
             rectangle = null;
             triangle = null;
-            point = Generate.GetPoint2D();
+            point = Generate.initPoint2D();
 
 
             drawPoint(point);
@@ -118,7 +118,7 @@ namespace Lab2
 
             if (rectangleWidth.Text == "" && rectangleHeight.Text == "")
             {
-                rectangle =Generate.GetRectangle();
+                rectangle =Generate.initRectangle();
             }
             else
             {
@@ -127,7 +127,7 @@ namespace Lab2
                     MessageBox.Show("Введите корректные данные");
                     return;
                 }
-                rectangle = Generate.GetSquere(double.Parse(rectangleHeight.Text), double.Parse(rectangleWidth.Text));                
+                rectangle = Generate.initRectangleSize(double.Parse(rectangleHeight.Text), double.Parse(rectangleWidth.Text));                
             }
             drawRectangle(rectangle);
             showRectangleInfo(rectangle);
@@ -147,7 +147,7 @@ namespace Lab2
             MainCanvas.Children.Clear();
             point = null;
             rectangle = null;
-            triangle = Generate.GetTriangle();
+            triangle = Generate.initTriangle();
 
 
             drawTriangle(triangle);

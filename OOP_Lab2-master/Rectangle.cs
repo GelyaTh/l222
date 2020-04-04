@@ -27,15 +27,14 @@ namespace Lab2
             this.point3 = point3;
             this.point4 = point4;
         }
-       /*/ public static Rectangle initRectangle()
+        public static Rectangle initRectangle()
         {
-            Rectangle rectangle = new Rectangle();
+            Point2D point1 = Generate.initPoint2D();
+            Point2D point2 = Generate.initPoint2D();
+            Point2D point3 = Generate.initPoint2D();
+            Point2D point4 = Generate.initPoint2D();
 
-            rectangle.point1 = Generate.initPoint2D();           
-            rectangle.point2 = Generate.initPoint2D();                    
-            rectangle.point3 = Generate.initPoint2D();
-            rectangle.point4 = Generate.initPoint2D();
-
+            Rectangle rectangle = new Rectangle(point1, point2, point3, point4);
 
             rectangle.point2.setX(rectangle.point4.getX());
             rectangle.point2.setY(rectangle.point1.getY());
@@ -49,15 +48,17 @@ namespace Lab2
 
             return rectangle;
         }
-        
+
         public static Rectangle initRectangleSize(double height, double width)
         {
-            Rectangle rectangle = new Rectangle();
 
-            rectangle.point1 = Generate.initPoint2D();      
-            rectangle.point2 = Generate.initPoint2D(); 
-            rectangle.point3 = Generate.initPoint2D();
-            rectangle.point4 = Generate.initPoint2D();
+
+            Point2D point1 = Generate.initPoint2D();
+            Point2D point2 = Generate.initPoint2D();
+            Point2D point3 = Generate.initPoint2D();
+            Point2D point4 = Generate.initPoint2D();
+
+            Rectangle rectangle = new Rectangle(point1, point2, point3, point4);
 
             rectangle.point1.setX(0);
             rectangle.point1.setY(0);
@@ -76,7 +77,8 @@ namespace Lab2
             rectangle.Top = Math.Min(rectangle.point1.getY(), rectangle.point4.getY());
             rectangle.Down = Math.Max(rectangle.point1.getY(), rectangle.point4.getY());
             return rectangle;
-        }/*/
+        }
+
 
         public Point2D getPoint1()
         {

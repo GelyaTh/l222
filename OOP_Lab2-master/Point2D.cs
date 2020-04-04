@@ -29,23 +29,19 @@ namespace Lab2
 
             x = random.NextDouble() * widthMAX;
             y = random.NextDouble() * heightMAX;
-
-            return;
         }
     
-        /*/public static Point2D initPoint2D()
+        public static Point2D initPoint2D()
         {
-            Point2D point = new Point2D();
-
-
+            
             const int widthMAX = 500;
             const int heightMAX = 300;
 
-            point.x = random.NextDouble() * widthMAX;
-            point.y = random.NextDouble() * heightMAX;
-
+            double x = random.NextDouble() * widthMAX;
+            double y = random.NextDouble() * heightMAX;
+            Point2D point = new Point2D(x, y);
             return point;
-        }/*/
+        }
         
         public void setX(double value)
         {

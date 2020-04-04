@@ -8,7 +8,7 @@ namespace Lab2
 {
     public class Generate
     {
-        int N = 100;
+        /*/int N = 100;
         Random random = new Random();
 
         // private Class1 Class = new Class1();
@@ -66,8 +66,8 @@ namespace Lab2
             Point2D point2 = new Point2D(x1 + h, y1 + h);
             Point2D point3 = new Point2D(x1, y1 + h);
             Rectangle r = new Rectangle(p, point1, point2, point3);
-            return r;
-            /*/ public static Point2D initPoint2D()
+            return r;/*/
+             public static Point2D initPoint2D()
              {
                  Point2D point;
                  return point = Point2D.initPoint2D();
@@ -89,7 +89,7 @@ namespace Lab2
              {
                  Rectangle rectangle;
                  return rectangle = Rectangle.initRectangleSize(height, width);
-             }/*/
+             }
         }
     }
-}
+

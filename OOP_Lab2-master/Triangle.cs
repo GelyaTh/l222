@@ -26,15 +26,15 @@ namespace Lab2
             this.point3 = point3;
         }
 
-        /*/public static Triangle initTriangle()
+        public static Triangle initTriangle()
         {
-            Triangle triangle = new Triangle();
 
-            triangle.point1 = Generate.initPoint2D();
-            
-            triangle.point2 = Generate.initPoint2D();
-            
-            triangle.point3 = Generate.initPoint2D();
+
+            Point2D point1 = Generate.initPoint2D();
+            Point2D point2 = Generate.initPoint2D();
+            Point2D point3 = Generate.initPoint2D();
+
+            Triangle triangle = new Triangle(point1, point2, point3);
 
             triangle.Top = Math.Min(triangle.point1.getY(), Math.Min(triangle.point2.getY(), triangle.point3.getY()));
             triangle.Down = Math.Max(triangle.point1.getY(), Math.Max(triangle.point2.getY(), triangle.point3.getY()));
@@ -42,7 +42,7 @@ namespace Lab2
             triangle.Right = Math.Max(triangle.point1.getX(), Math.Max(triangle.point2.getX(), triangle.point3.getX()));
 
             return triangle;
-        }/*/
+        }
 
         public Point2D getPoint1()
         {
